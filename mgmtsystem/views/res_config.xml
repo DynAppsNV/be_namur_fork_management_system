@@ -7,22 +7,15 @@
         <field name="inherit_id" ref="base.res_config_settings_view_form" />
         <field name="priority" eval="95" />
         <field name="arch" type="xml">
-
             <xpath expr="//form[hasclass('oe_form_configuration')]" position="inside">
                 <div
                     class="app_settings_block"
                     data-string="Management System"
                     string="Management System"
                     data-key="mgmtsystem"
-                    groups="mgmtsystem.group_mgmtsystem_user_manager"
-                >
-
+                    groups="mgmtsystem.group_mgmtsystem_user_manager">
                     <h2>Management Systems</h2>
-                    <div
-                        class="row mt16 o_settings_container"
-                        id="mgmtsystem_systems_setting"
-                    >
-
+                    <div class="row mt16 o_settings_container" id="mgmtsystem_systems_setting">
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field name="module_mgmtsystem_quality" />
@@ -74,17 +67,10 @@
 
 
                     <h2>Applications</h2>
-                    <div
-                        class="row mt16 o_settings_container"
-                        id="mgmtsystem_applications_setting"
-                    >
-
+                    <div class="row mt16 o_settings_container" id="mgmtsystem_applications_setting">
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_action"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_action" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_action" />
@@ -93,13 +79,9 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_nonconformity"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_nonconformity" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_nonconformity" />
@@ -108,13 +90,9 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_claim"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_claim" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_claim" />
@@ -126,10 +104,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_audit"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_audit" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_audit" />
@@ -141,10 +116,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_review"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_review" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_review" />
@@ -156,10 +128,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_approval"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_approval" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_document_page_approval" />
@@ -168,17 +137,11 @@
                     </div>
 
                     <h2>Manuals</h2>
-                    <div
-                        class="row mt16 o_settings_container"
-                        id="mgmtsystem_manuals_setting"
-                    >
+                    <div class="row mt16 o_settings_container" id="mgmtsystem_manuals_setting">
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_quality_manual"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_quality_manual" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_document_page_quality_manual" />
@@ -190,10 +153,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_environment_manual"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_environment_manual" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_document_page_environment_manual" />
@@ -205,10 +165,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_health_safety_manual"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_health_safety_manual" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_health_safety_manual" />
@@ -220,10 +177,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_information_security_manual"
-                                    class="oe_inline"
-                                />
+                                <field name="module_information_security_manual" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_information_security_manual" />
@@ -235,17 +189,11 @@
                     </div>
 
                     <h2>Documentation</h2>
-                    <div
-                        class="row mt16 o_settings_container"
-                        id="mgmtsystem_documentation_setting"
-                    >
+                    <div class="row mt16 o_settings_container" id="mgmtsystem_documentation_setting">
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_procedure"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_procedure" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_document_page_procedure" />
@@ -257,10 +205,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_environmental_aspect"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_environmental_aspect" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label
@@ -274,10 +219,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_hazard"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_hazard" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_hazard" />
@@ -289,10 +231,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_mgmtsystem_security_event"
-                                    class="oe_inline"
-                                />
+                                <field name="module_mgmtsystem_security_event" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_mgmtsystem_security_event" />
@@ -304,10 +243,7 @@
 
                         <div class="col-xs-12 col-md-6 o_setting_box">
                             <div class="o_setting_left_pane">
-                                <field
-                                    name="module_document_page_work_instruction"
-                                    class="oe_inline"
-                                />
+                                <field name="module_document_page_work_instruction" class="oe_inline"/>
                             </div>
                             <div class="o_setting_right_pane">
                                 <label for="module_document_page_work_instruction" />

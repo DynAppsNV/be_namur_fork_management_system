@@ -3,16 +3,6 @@
 
 from odoo import _, fields, models
 
-_STATES = [
-    ("draft", _("Draft")),
-    ("analysis", _("Analysis")),
-    ("pending", _("Action Plan")),
-    ("open", _("In Progress")),
-    ("done", _("Closed")),
-    ("cancel", _("Cancelled")),
-]
-
-
 class MgmtsystemNonconformityStage(models.Model):
     """This object is used to defined different state for non conformity."""
 
@@ -24,7 +14,14 @@ class MgmtsystemNonconformityStage(models.Model):
     sequence = fields.Integer(
         help="Used to order states. Lower is better.", default=100
     )
-    state = fields.Selection(_STATES, default="draft")
+    state = fields.Selection(selection=[
+        ("draft", "Draft"),
+        ("analysis", "Analysis"),
+        ("pending", "Action Plan"),
+        ("open", "In Progress"),
+        ("done", "Closed"),
+        ("cancel", "Cancelled"),
+    ], default="draft")
     is_starting = fields.Boolean(
         string="Is starting Stage",
         help="select stis checkbox if this is the default stage \n"
