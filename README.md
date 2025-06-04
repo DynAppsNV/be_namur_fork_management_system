@@ -45,7 +45,7 @@ addon | version | maintainers | summary
 [mgmtsystem_nonconformity_product](mgmtsystem_nonconformity_product/) | 13.0.1.0.0 |  | Bridge module between Product and Management System.
 [mgmtsystem_nonconformity_type](mgmtsystem_nonconformity_type/) | 13.0.1.0.0 |  | Add Nonconformity classification for the root context.
 [mgmtsystem_partner](mgmtsystem_partner/) | 13.0.1.0.0 |  | Add Management System reference on Partner's Contacts.
-[mgmtsystem_quality](mgmtsystem_quality/) | 13.0.1.0.0 | [![max3903](https://github.com/max3903.png?size=30px)](https://github.com/max3903) | Manage your quality management system
+[mgmtsystem_quality](mgmtsystem_quality/) | 13.0.1.0.0 | <a href='https://github.com/max3903'><img src='https://github.com/max3903.png' width='32' height='32' style='border-radius:50%;' alt='max3903'/></a> | Manage your quality management system
 [mgmtsystem_review](mgmtsystem_review/) | 13.0.1.2.1 |  | Management System - Review
 [mgmtsystem_survey](mgmtsystem_survey/) | 13.0.1.0.0 |  | Management System - Survey
 
