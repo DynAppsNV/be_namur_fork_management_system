@@ -39,6 +39,14 @@ class TestModelAction(common.TransactionCase):
         self.assertFalse(self.record.date_open)
         self.record.stage_id = stage
         self._assert_date_equal(self.record.date_open)
+        new_record = self.env["mgmtsystem.action"].create(
+            {
+                "reference": "SampleReference",
+                "name": "SampleAction",
+                "type_action": "immediate",
+            }
+        )
+        self.assertEqual(new_record.reference, self.env._("SampleReference"))
 
     def test_case_close(self):
         """Test object close state."""
@@ -53,16 +61,14 @@ class TestModelAction(common.TransactionCase):
         except exceptions.ValidationError:
             self.assertTrue(True)
         stage = self.env.ref("mgmtsystem_action.stage_close")
-        try:
-            self.record.write({"stage_id": stage.id})
-        except exceptions.ValidationError:
-            self.assertTrue(True)
+        self.record.write({"stage_id": stage.id})
+        self.assertTrue(self.record.number_of_days_to_close <= 0)
 
     def test_get_action_url(self):
         """Test if action url start with http."""
         url = self.record.get_action_url()
         self.assertEqual(url.startswith("http"), True)
-        self.assertIn("&id={}&model={}".format(self.record.id, self.record._name), url)
+        self.assertIn(f"&id={self.record.id}&model={self.record._name}", url)
 
     def test_process_reminder_queue(self):
         """Check if process_reminder_queue work when days reminder are 10."""
@@ -78,6 +84,8 @@ class TestModelAction(common.TransactionCase):
             with mock.patch.object(type(tmpl_model), "send_mail") as mocked:
                 self.env["mgmtsystem.action"].process_reminder_queue()
                 mocked.assert_called_with(self.record.id)
+                self.env["mgmtsystem.action"].process_reminder_queue(-100)
+                mocked.assert_called_with(self.record.id)
 
     def test_stage_groups(self):
         """Check if stage_groups return all stages."""
@@ -92,3 +100,10 @@ class TestModelAction(common.TransactionCase):
         with mock.patch.object(type(tmpl_model), "send_mail") as mocked:
             self.record.send_mail_for_action()
             mocked.assert_called_with(self.record.id, force_send=True)
+
+    def test_case_open(self):
+        """Check if case_open work."""
+        stage_open = self.env.ref("mgmtsystem_action.stage_open")
+        self.record.case_open()
+        self.assertEqual(self.record.active, True)
+        self.assertEqual(self.record.stage_id, stage_open)

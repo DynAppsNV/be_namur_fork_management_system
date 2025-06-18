@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-17 02:42+0000\n"
-"PO-Revision-Date: 2023-09-04 18:40+0000\n"
+"PO-Revision-Date: 2025-05-06 09:24+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -17,92 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
-
-#. module: mgmtsystem_action
-#: model:mail.template,body_html:mgmtsystem_action.action_email_template_reminder_action
-msgid ""
-"\n"
-"            \n"
-"<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
-"\n"
-"<p>\n"
-"This is an automated message to remind you that the\n"
-"following action is due to be completed in 10 days (<t t-out=\"object."
-"date_deadline\"/>):\n"
-"\n"
-"<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\"/></a></"
-"b>\n"
-"</p>\n"
-"\n"
-"<p>\n"
-"Thank you and have a nice day.<br>\n"
-"--<br>\n"
-"Odoo\n"
-"</p>\n"
-"            \n"
-"        "
-msgstr ""
-"\n"
-"            \n"
-"<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
-"\n"
-"<p>\n"
-"Questo è un messaggio automatico per ricordarti che la\n"
-"seguente azione deve essere completata entro 10 giorni (<t t-out=\"object."
-"date_deadline\"/>):\n"
-"\n"
-"<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\"/></a></"
-"b>\n"
-"</p>\n"
-"\n"
-"<p>\n"
-"Grazie e buona giornata.<br>\n"
-"--<br>\n"
-"Odoo\n"
-"</p>\n"
-"            \n"
-"        "
-
-#. module: mgmtsystem_action
-#: model:mail.template,body_html:mgmtsystem_action.email_template_new_action_reminder
-msgid ""
-"\n"
-"            \n"
-"<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
-"\n"
-"<p>A new action has been assigned to you: <b><a t-att-href=\"object."
-"get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
-"<p><b>Deadline: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
-"\n"
-"<p>Please, use the action stages and messages to log progress.</p>\n"
-"\n"
-"<p>\n"
-"Thank you<br>\n"
-"--<br>\n"
-"Odoo\n"
-"</p>\n"
-"            \n"
-"        "
-msgstr ""
-"\n"
-"            \n"
-"<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
-"\n"
-"<p>Ti è stata assegnata una nuova azione: <b><a t-att-href=\"object."
-"get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
-"<p><b>Scadenza: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
-"\n"
-"<p>Utilizza lo stato dell'azione e i messaggi per tracciare lo sviluppo.</"
-"p>\n"
-"\n"
-"<p>\n"
-"Grazie<br>\n"
-"--<br>\n"
-"Odoo\n"
-"</p>\n"
-"            \n"
-"        "
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: mgmtsystem_action
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_report__number_of_actions
@@ -145,6 +60,83 @@ msgstr "#ffa500"
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_action.view_mgmtsystem_action_kanban
 msgid "#ffffff"
 msgstr "#ffffff"
+
+#. module: mgmtsystem_action
+#: model:mail.template,body_html:mgmtsystem_action.action_email_template_reminder_action
+msgid ""
+"<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
+"\n"
+"<p>\n"
+"This is an automated message to remind you that the\n"
+"following action is due to be completed in 10 days (<t t-out=\"object."
+"date_deadline\"/>):\n"
+"\n"
+"<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\"/></a></"
+"b>\n"
+"</p>\n"
+"\n"
+"<p>\n"
+"Thank you and have a nice day.<br/>\n"
+"--<br/>\n"
+"Odoo\n"
+"</p>\n"
+"            \n"
+"        "
+msgstr ""
+"<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
+"\n"
+"<p>\n"
+"Questo è un messaggio automatico per ricordarti che la\n"
+"seguente azione deve essere completata entro 10 giorni (<t t-out=\"object."
+"date_deadline\"/>):\n"
+"\n"
+"<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\""
+"/></a></b>\n"
+"</p>\n"
+"\n"
+"<p>\n"
+"Grazie e buona giornata.<br>\n"
+"--<br>\n"
+"Odoo\n"
+"</p>\n"
+"            \n"
+"        "
+
+#. module: mgmtsystem_action
+#: model:mail.template,body_html:mgmtsystem_action.email_template_new_action_reminder
+msgid ""
+"<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
+"\n"
+"<p>A new action has been assigned to you: <b><a t-att-href=\"object."
+"get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
+"<p><b>Deadline: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
+"\n"
+"<p>Please, use the action stages and messages to log progress.</p>\n"
+"\n"
+"<p>\n"
+"Thank you<br/>\n"
+"--<br/>\n"
+"Odoo\n"
+"</p>\n"
+"            \n"
+"        "
+msgstr ""
+"<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
+"\n"
+"<p>Ti è stata assegnata una nuova azione: <b><a t-att-href=\"object."
+"get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
+"<p><b>Scadenza: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
+"\n"
+"<p>Utilizza lo stato dell'azione e i messaggi per tracciare lo sviluppo.</p>"
+"\n"
+"\n"
+"<p>\n"
+"Grazie<br>\n"
+"--<br>\n"
+"Odoo\n"
+"</p>\n"
+"            \n"
+"        "
 
 #. module: mgmtsystem_action
 #: model:ir.model,name:mgmtsystem_action.model_mgmtsystem_action
@@ -328,7 +320,7 @@ msgstr "Bozza"
 #. module: mgmtsystem_action
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_action.view_mgmtsystem_action_kanban
 msgid "Dropdown menu"
-msgstr "Menù a discesa"
+msgstr "Menu a tendina"
 
 #. module: mgmtsystem_action
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_action.view_mgmtsystem_action_kanban
@@ -337,7 +329,6 @@ msgstr "Modifica attività"
 
 #. module: mgmtsystem_action
 #: model:ir.actions.server,name:mgmtsystem_action.ir_cron_mgmtsystem_action_reminder_ir_actions_server
-#: model:ir.cron,cron_name:mgmtsystem_action.ir_cron_mgmtsystem_action_reminder
 msgid "Email Action Reminders 10 days before due date."
 msgstr "Promemoria email 10 giorni prima della scadenza dell'azione."
 
@@ -425,6 +416,7 @@ msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: mgmtsystem_action
 #: model:ir.model.fields,help:mgmtsystem_action.field_mgmtsystem_action__message_has_error
+#: model:ir.model.fields,help:mgmtsystem_action.field_mgmtsystem_action__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 
@@ -451,14 +443,6 @@ msgid "Is Follower"
 msgstr "Segue"
 
 #. module: mgmtsystem_action
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_report____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_stage____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_tag____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: mgmtsystem_action
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__write_uid
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_stage__write_uid
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action_tag__write_uid
@@ -481,11 +465,6 @@ msgstr "Attività in ritardo"
 #: model:ir.model.fields.selection,name:mgmtsystem_action.selection__mgmtsystem_action__priority__0
 msgid "Low"
 msgstr "Basso"
-
-#. module: mgmtsystem_action
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Allegato principale"
 
 #. module: mgmtsystem_action
 #: model:ir.model,name:mgmtsystem_action.model_mgmtsystem_action_report
@@ -535,14 +514,8 @@ msgstr "Nome"
 #. module: mgmtsystem_action
 #. odoo-python
 #: code:addons/mgmtsystem_action/models/mgmtsystem_action.py:0
-#, python-format
 msgid "New"
 msgstr "Nuova"
-
-#. module: mgmtsystem_action
-#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr "Evento calendario attività successiva"
 
 #. module: mgmtsystem_action
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__activity_date_deadline
@@ -636,6 +609,17 @@ msgstr "Responsabile"
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__activity_user_id
 msgid "Responsible User"
 msgstr "Utente responsabile"
+
+#. module: mgmtsystem_action
+#: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Errore consegna SMS"
+
+#. module: mgmtsystem_action
+#. odoo-python
+#: code:addons/mgmtsystem_action/tests/test_create_action.py:0
+msgid "SampleReference"
+msgstr "Riferimento campione"
 
 #. module: mgmtsystem_action
 #: model:ir.model.fields,field_description:mgmtsystem_action.field_mgmtsystem_action__sequence
@@ -753,7 +737,6 @@ msgstr "Utente"
 #. module: mgmtsystem_action
 #. odoo-python
 #: code:addons/mgmtsystem_action/models/mgmtsystem_action.py:0
-#, python-format
 msgid "We cannot bring back the action to draft stage"
 msgstr "Impossibile riportare l'azione alla fase bozza"
 
@@ -777,8 +760,95 @@ msgstr "oe_kanban_text_red"
 msgid "{{object.name}}"
 msgstr "{{object.name}}"
 
-#~ msgid "SMS Delivery error"
-#~ msgstr "Errore consegna SMS"
+#~ msgid ""
+#~ "\n"
+#~ "            \n"
+#~ "<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "This is an automated message to remind you that the\n"
+#~ "following action is due to be completed in 10 days (<t t-out=\"object."
+#~ "date_deadline\"/>):\n"
+#~ "\n"
+#~ "<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\"/></"
+#~ "a></b>\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "Thank you and have a nice day.<br>\n"
+#~ "--<br>\n"
+#~ "Odoo\n"
+#~ "</p>\n"
+#~ "            \n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "            \n"
+#~ "<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "Questo è un messaggio automatico per ricordarti che la\n"
+#~ "seguente azione deve essere completata entro 10 giorni (<t t-out=\"object."
+#~ "date_deadline\"/>):\n"
+#~ "\n"
+#~ "<b><a t-att-href=\"object.get_action_url()\"><t t-out=\"object.name\"/></"
+#~ "a></b>\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "Grazie e buona giornata.<br>\n"
+#~ "--<br>\n"
+#~ "Odoo\n"
+#~ "</p>\n"
+#~ "            \n"
+#~ "        "
+
+#~ msgid ""
+#~ "\n"
+#~ "            \n"
+#~ "<p>Hello <t t-out=\"object.user_id.name\"/>,</p>\n"
+#~ "\n"
+#~ "<p>A new action has been assigned to you: <b><a t-att-href=\"object."
+#~ "get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
+#~ "<p><b>Deadline: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
+#~ "\n"
+#~ "<p>Please, use the action stages and messages to log progress.</p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "Thank you<br>\n"
+#~ "--<br>\n"
+#~ "Odoo\n"
+#~ "</p>\n"
+#~ "            \n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "            \n"
+#~ "<p>Salve<t t-out=\"object.user_id.name\"/>,</p>\n"
+#~ "\n"
+#~ "<p>Ti è stata assegnata una nuova azione: <b><a t-att-href=\"object."
+#~ "get_action_url()\"><t t-out=\"object.name\"/></a></b></p>\n"
+#~ "<p><b>Scadenza: </b><t t-out=\"object.date_deadline or ''\"/></p>\n"
+#~ "\n"
+#~ "<p>Utilizza lo stato dell'azione e i messaggi per tracciare lo sviluppo.</"
+#~ "p>\n"
+#~ "\n"
+#~ "<p>\n"
+#~ "Grazie<br>\n"
+#~ "--<br>\n"
+#~ "Odoo\n"
+#~ "</p>\n"
+#~ "            \n"
+#~ "        "
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Allegato principale"
+
+#~ msgid "Next Activity Calendar Event"
+#~ msgstr "Evento calendario attività successiva"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "Numero di messaggi che richiedono un'azione"

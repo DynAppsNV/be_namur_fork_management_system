@@ -3,7 +3,7 @@
 
 from datetime import datetime, timedelta
 
-from odoo import _, api, exceptions, fields, models
+from odoo import api, exceptions, fields, models
 
 
 class MgmtsystemAction(models.Model):
@@ -35,7 +35,7 @@ class MgmtsystemAction(models.Model):
     number_of_days_to_close = fields.Integer(
         "# of days to close", compute="_compute_number_of_days_to_close", store=True
     )
-    reference = fields.Char(required=True, readonly=True, default=lambda self: _("New"))
+    reference = fields.Char(readonly=True)
     user_id = fields.Many2one(
         "res.users",
         "Responsible",
@@ -100,7 +100,7 @@ class MgmtsystemAction(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for one_vals in vals_list:
-            if one_vals.get("reference", _("New")) == _("New"):
+            if one_vals.get("reference", self.env._("New")) == self.env._("New"):
                 Sequence = self.env["ir.sequence"]
                 one_vals["reference"] = Sequence.next_by_code("mgmtsystem.action")
         actions = super().create(vals_list)
@@ -113,7 +113,7 @@ class MgmtsystemAction(models.Model):
             # Do not allow to bring back actions to draft
             if rec.date_open and rec.stage_id.is_starting:
                 raise exceptions.ValidationError(
-                    _("We cannot bring back the action to draft stage")
+                    self.env._("We cannot bring back the action to draft stage")
                 )
             # If stage is changed, the action is opened
             if not rec.date_open and not rec.stage_id.is_starting:
@@ -135,9 +135,7 @@ class MgmtsystemAction(models.Model):
             .sudo()
             .get_param("web.base.url", default="http://localhost:8069")
         )
-        url = ("{}/web#db={}&id={}&model={}").format(
-            base_url, self.env.cr.dbname, self.id, self._name
-        )
+        url = f"{base_url}/web#db={self.env.cr.dbname}&id={self.id}&model={self._name}"
         return url
 
     @api.model
@@ -163,5 +161,4 @@ class MgmtsystemAction(models.Model):
 
     def case_open(self):
         """Opens case."""
-        # TODO smk: is this used?
         return self.write({"active": True, "stage_id": self._get_stage_open().id})
