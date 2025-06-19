@@ -119,13 +119,6 @@ msgid "Justification"
 msgstr "Justification"
 
 #. module: mgmtsystem_hazard_risk
-#: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_residual_risk____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_risk_computation____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_risk_type____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: mgmtsystem_hazard_risk
 #: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_residual_risk__write_uid
 #: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_risk_computation__write_uid
 #: model:ir.model.fields,field_description:mgmtsystem_hazard_risk.field_mgmtsystem_hazard_risk_type__write_uid
@@ -251,7 +244,6 @@ msgstr "Sévérité"
 #. module: mgmtsystem_hazard_risk
 #. odoo-python
 #: code:addons/mgmtsystem_hazard_risk/models/common.py:0
-#, python-format
 msgid "You must define the company's risk computing formula. Go to settings"
 msgstr ""
 

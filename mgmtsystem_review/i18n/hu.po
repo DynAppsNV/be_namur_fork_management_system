@@ -224,6 +224,7 @@ msgstr ""
 
 #. module: mgmtsystem_review
 #: model:ir.model.fields,help:mgmtsystem_review.field_mgmtsystem_review__message_has_error
+#: model:ir.model.fields,help:mgmtsystem_review.field_mgmtsystem_review__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
@@ -240,12 +241,6 @@ msgstr ""
 #. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_is_follower
 msgid "Is Follower"
-msgstr ""
-
-#. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review_line____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: mgmtsystem_review
@@ -267,11 +262,6 @@ msgid "Lines"
 msgstr ""
 
 #. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_main_attachment_id
-msgid "Main Attachment"
-msgstr ""
-
-#. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_has_error
 msgid "Message Delivery error"
 msgstr ""
@@ -289,11 +279,6 @@ msgstr ""
 #. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__name
 msgid "Name"
-msgstr ""
-
-#. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
 msgstr ""
 
 #. module: mgmtsystem_review
@@ -431,6 +416,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_review.view_mgmtsystem_review_filter
 #: model_terms:ir.ui.view,arch_db:mgmtsystem_review.view_review_calendar
 msgid "Reviews"
+msgstr ""
+
+#. module: mgmtsystem_review
+#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_has_sms_error
+msgid "SMS Delivery error"
 msgstr ""
 
 #. module: mgmtsystem_review
