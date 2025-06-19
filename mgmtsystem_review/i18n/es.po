@@ -226,6 +226,7 @@ msgstr "Si está marcada, nuevos mensajes requieren tu atención."
 
 #. module: mgmtsystem_review
 #: model:ir.model.fields,help:mgmtsystem_review.field_mgmtsystem_review__message_has_error
+#: model:ir.model.fields,help:mgmtsystem_review.field_mgmtsystem_review__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "si está marcada, algunos mensajes tienen un error de entrega."
 
@@ -243,12 +244,6 @@ msgstr "Entradas"
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_is_follower
 msgid "Is Follower"
 msgstr "es seguidor"
-
-#. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review____last_update
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review_line____last_update
-msgid "Last Modified on"
-msgstr "Última modificación el"
 
 #. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__write_uid
@@ -269,11 +264,6 @@ msgid "Lines"
 msgstr "Líneas"
 
 #. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Archivo adjunto principal"
-
-#. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_has_error
 msgid "Message Delivery error"
 msgstr "error de entrega de mensaje"
@@ -292,11 +282,6 @@ msgstr "Mi fecha límite de la actividad"
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__name
 msgid "Name"
 msgstr "Nombre"
-
-#. module: mgmtsystem_review
-#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr "Próximo evento del calendario de actividades"
 
 #. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__activity_date_deadline
@@ -436,6 +421,11 @@ msgid "Reviews"
 msgstr "Revisiones"
 
 #. module: mgmtsystem_review
+#: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error en la entrega de SMS"
+
+#. module: mgmtsystem_review
 #: model:ir.model.fields,field_description:mgmtsystem_review.field_mgmtsystem_review__state
 msgid "State"
 msgstr "Estado"
@@ -489,8 +479,14 @@ msgstr "mensajes de la página web"
 msgid "Website communication history"
 msgstr "historial de la comunicación en la web"
 
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error en la entrega de SMS"
+#~ msgid "Last Modified on"
+#~ msgstr "Última modificación el"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Archivo adjunto principal"
+
+#~ msgid "Next Activity Calendar Event"
+#~ msgstr "Próximo evento del calendario de actividades"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "número de mensajes que requieren una acción"
