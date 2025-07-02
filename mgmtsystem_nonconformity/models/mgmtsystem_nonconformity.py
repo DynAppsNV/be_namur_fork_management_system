@@ -20,7 +20,7 @@ class MgmtsystemNonconformity(models.Model):
         ].search([("is_starting", "=", True)], limit=1)
 
     @api.model
-    def _stage_groups(self, stages, domain, order):
+    def _stage_groups(self, stages=None, domain=None, order=None):
         stage_ids = self.env["mgmtsystem.nonconformity.stage"].search([])
         return stage_ids
 
